@@ -1,26 +1,22 @@
-# Portal SINDADOS-BA — atividade React + Bootstrap
+# JoaozinhoDadosBA
 
-Projeto acadêmico demonstrativo, feito com Vite, React, React-Bootstrap e Bootstrap 5. Os valores salariais da tabela são **fictícios**, usados somente para demonstrar busca e modal.
+Atividade de React e Bootstrap baseada no contexto de um portal para profissionais de TI da Bahia. É uma demonstração simples, sem copiar o site do SINDADOS-BA. Os valores salariais são fictícios.
 
-## Rodar no GitHub Codespaces
+## Rodar no Codespaces
 
-1. Abra o repositório no GitHub e clique em **Code > Codespaces > Create codespace on main**.
-2. No terminal do Codespaces, execute `npm install`.
-3. Execute `npm run dev`.
-4. Abra a porta **5173** quando o Codespaces oferecer a prévia.
+No terminal, execute:
 
-## Demonstração em sala
+```bash
+npm install
+npm run dev
+```
 
-1. Mostre o menu no computador e em largura de celular.
-2. Clique em **Login**: o cabeçalho passa a mostrar “Olá, João” e **Sair**. Clique em **Sair** para voltar.
-3. Use as setas ou indicadores do carrossel para trocar as três notícias.
-4. Digite `DBA` na busca da tabela e abra **Ver detalhes / carga horária**. Feche o modal e apague a busca.
+Depois abra a porta 5173.
 
-## Organização
+## Apresentar em sala
 
-- `src/App.jsx`: estado de login, dados das notícias e dos cargos.
-- `src/components/HeaderNavbar.jsx`: menu responsivo e interface conforme o login.
-- `src/components/NewsCarousel.jsx`: carrossel montado a partir de props.
-- `src/components/SalaryTable.jsx`: busca por cargo e modal de detalhes.
+1. Abra o menu no celular e clique em **Login**. O nome aparece; clique em **Sair**.
+2. Troque as três notícias pelas setas do carrossel.
+3. Digite `DBA` na busca e clique em **Ver detalhes / carga horária**. Feche o modal.
 
-O botão de login é uma simulação local para apresentar o estado do React; não existe cadastro ou autenticação real.
+`App.jsx` guarda os dados e o estado de login. A pasta `components` tem a barra de navegação, o carrossel e a tabela.

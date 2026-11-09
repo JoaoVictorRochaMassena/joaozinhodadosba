@@ -7,7 +7,7 @@ export default function SalaryTable({ cargos }) {
   const filtrados = cargos.filter(item => item.cargo.toLocaleLowerCase('pt-BR').includes(busca.toLocaleLowerCase('pt-BR')));
 
   return (
-    <div className="table-panel p-3 p-md-4">
+    <div>
       <Form.Group className="mb-4" controlId="busca-cargo">
         <Form.Label className="fw-semibold">Buscar cargo</Form.Label>
         <Form.Control value={busca} onChange={e => setBusca(e.target.value)} placeholder="Ex.: Desenvolvedor, DBA..." />
