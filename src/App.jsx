@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import HeaderNavbar from './components/HeaderNavbar.jsx';
 import NewsCarousel from './components/NewsCarousel.jsx';
 import SalaryTable from './components/SalaryTable.jsx';

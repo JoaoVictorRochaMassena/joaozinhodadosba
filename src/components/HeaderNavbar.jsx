@@ -1,3 +1,4 @@
+import React from 'react';
 import { Container, Nav, Navbar, Button } from 'react-bootstrap';
 
 export default function HeaderNavbar({ isLoggedIn, userProfile, onLogin, onLogout }) {
