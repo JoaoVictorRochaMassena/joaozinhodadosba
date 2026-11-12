@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Estudos - AngularJS</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main ng-controller="StudyController">
+      <a href="/">Início</a>
+      <h1>Meus estudos - AngularJS</h1>
+      <section>
+        <h2>Dúvidas</h2>
+        <study-accordion items="faq"></study-accordion>
+      </section>
+      <section>
+        <h2>Matérias</h2>
+        <label>Pesquisar <input ng-model="search" ng-change="page=1" /></label
+        ><study-dropdown
+          options="categories"
+          on-select="setCategory(value)"
+        ></study-dropdown>
+        <p>Filtro: {{category}}</p>
+        <ul>
+          <li
+            ng-repeat="item in filtered() | limitTo:pageSize:(page-1)*pageSize"
+          >
+            {{item.name | uppercase}} — {{item.category}}
+          </li>
+        </ul>
+        <p ng-if="!filtered().length">Nenhuma matéria encontrada.</p>
+        <study-pagination
+          total="pages()"
+          current="page"
+          on-change="changePage(value)"
+        ></study-pagination>
+      </section>
+      <section>
+        <h2>Progresso de leitura</h2>
+        <label
+          >Páginas lidas
+          <input type="range" min="0" max="100" ng-model="progress" /></label
+        ><study-progress value="progress"></study-progress>
+      </section>
+      <section>
+        <h2>Planejamento</h2>
+        <study-tabs items="tabs"></study-tabs>
+      </section>
+      <button ng-click="save()">Salvar progresso</button
+      ><study-toast
+        message="notice.message"
+        on-close="closeNotice()"
+      ></study-toast>
+    </main>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
