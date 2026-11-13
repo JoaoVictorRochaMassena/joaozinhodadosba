@@ -20,9 +20,10 @@ export default function (app) {
   }));
   app.directive("studyTabs", () => ({
     scope: { items: "=" },
-    template: `<div role="tablist"><button role="tab" ng-repeat="item in items" aria-selected="{{active===$index}}" ng-click="active=$index">{{item.title}}</button></div><p role="tabpanel">{{items[active].content}}</p>`,
+    template: `<div role="tablist"><button role="tab" ng-repeat="item in items" aria-selected="{{active===$index}}" ng-click="selectTab($index)">{{item.title}}</button></div><p role="tabpanel">{{items[active].content}}</p>`,
     link(s) {
       s.active = 0;
+      s.selectTab = (index) => { s.active = index; };
     },
   }));
   app.directive("studyDropdown", [
@@ -51,3 +52,4 @@ export default function (app) {
     template: `<div class="toast" role="status" ng-if="message">{{message}} <button ng-click="onClose()" aria-label="Fechar aviso">Fechar</button></div>`,
   }));
 }
+
