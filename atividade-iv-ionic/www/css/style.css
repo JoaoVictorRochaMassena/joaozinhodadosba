@@ -1,1 +1,89 @@
-:root{--ucsal-marinho:#12365b;--ucsal-claro:#dceefa;--ucsal-branco:#fff}body{color:#243748}.bar.bar-positive,.button.button-positive{background:var(--ucsal-marinho);border-color:var(--ucsal-marinho)}.bar-positive .title,.bar-positive .button{color:var(--ucsal-branco)}.pane,.view{background:#f5f8fb}.pagina{max-width:760px;margin:0 auto}.login{max-width:440px;padding-top:25px}h1,h2{color:var(--ucsal-marinho)}h1{font-size:26px}.nota{background:var(--ucsal-claro);padding:10px}.erro{color:#a51d20}.ilustracao,.item-image img{width:100%;max-height:180px;object-fit:cover}.badge.badge-balanced{background:#237945}.badge.badge-energized{background:#ffd27c;color:#513600}.codigo{display:block;word-break:break-all;background:#eef2f5;padding:8px}.item p{white-space:normal}.institucional input:disabled{opacity:1;color:#4c5964}input,select{max-width:100%}.financeiro .badge{position:static;display:inline-block;margin:8px 0}@media(max-width:480px){h1{font-size:23px}.pagina{width:100%}.item{padding:12px}}
+:root {
+  --ucsal-marinho: #12365b;
+  --ucsal-claro: #dceefa;
+  --ucsal-branco: #fff;
+}
+body {
+  color: #243748;
+}
+.bar.bar-positive,
+.button.button-positive {
+  background: var(--ucsal-marinho);
+  border-color: var(--ucsal-marinho);
+}
+.bar-positive .title,
+.bar-positive .button {
+  color: var(--ucsal-branco);
+}
+.pane,
+.view {
+  background: #f5f8fb;
+}
+.pagina {
+  max-width: 760px;
+  margin: 0 auto;
+}
+.login {
+  max-width: 440px;
+  padding-top: 25px;
+}
+h1,
+h2 {
+  color: var(--ucsal-marinho);
+}
+h1 {
+  font-size: 26px;
+}
+.nota {
+  background: var(--ucsal-claro);
+  padding: 10px;
+}
+.erro {
+  color: #a51d20;
+}
+.ilustracao,
+.item-image img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+}
+.badge.badge-balanced {
+  background: #237945;
+}
+.badge.badge-energized {
+  background: #ffd27c;
+  color: #513600;
+}
+.codigo {
+  display: block;
+  word-break: break-all;
+  background: #eef2f5;
+  padding: 8px;
+}
+.item p {
+  white-space: normal;
+}
+.institucional input:disabled {
+  opacity: 1;
+  color: #4c5964;
+}
+input,
+select {
+  max-width: 100%;
+}
+.financeiro .badge {
+  position: static;
+  display: inline-block;
+  margin: 8px 0;
+}
+@media (max-width: 480px) {
+  h1 {
+    font-size: 23px;
+  }
+  .pagina {
+    width: 100%;
+  }
+  .item {
+    padding: 12px;
+  }
+}

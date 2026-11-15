@@ -1,4 +1,42 @@
-const http=require('node:http'),fs=require('node:fs'),path=require('node:path');
-const root=path.join(__dirname,'www');
-const types={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.svg':'image/svg+xml','.woff':'font/woff','.ttf':'font/ttf'};
-http.createServer((req,res)=>{let target;try{target=path.resolve(root,'.'+decodeURIComponent(req.url.split('?')[0]));}catch{res.writeHead(400).end();return;}if(target!==root&&!target.startsWith(root+path.sep)){res.writeHead(403).end();return;}if(target===root)target=path.join(root,'index.html');fs.readFile(target,(err,data)=>{if(err){res.writeHead(404).end('Não encontrado');return;}res.writeHead(200,{'Content-Type':types[path.extname(target)]||'application/octet-stream'});res.end(data);});}).listen(8100,'0.0.0.0',()=>console.log('Portal: http://localhost:8100'));
+const http = require("node:http"),
+  fs = require("node:fs"),
+  path = require("node:path");
+const root = path.join(__dirname, "www");
+const types = {
+  ".html": "text/html; charset=utf-8",
+  ".js": "text/javascript; charset=utf-8",
+  ".css": "text/css; charset=utf-8",
+  ".svg": "image/svg+xml",
+  ".woff": "font/woff",
+  ".ttf": "font/ttf",
+};
+http
+  .createServer((req, res) => {
+    let target;
+    try {
+      target = path.resolve(
+        root,
+        "." + decodeURIComponent(req.url.split("?")[0]),
+      );
+    } catch {
+      res.writeHead(400).end();
+      return;
+    }
+    if (target !== root && !target.startsWith(root + path.sep)) {
+      res.writeHead(403).end();
+      return;
+    }
+    if (target === root) target = path.join(root, "index.html");
+    fs.readFile(target, (err, data) => {
+      if (err) {
+        res.writeHead(404).end("Não encontrado");
+        return;
+      }
+      res.writeHead(200, {
+        "Content-Type":
+          types[path.extname(target)] || "application/octet-stream",
+      });
+      res.end(data);
+    });
+  })
+  .listen(8100, "0.0.0.0", () => console.log("Portal: http://localhost:8100"));

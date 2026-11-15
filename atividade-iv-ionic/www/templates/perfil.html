@@ -1,1 +1,77 @@
-<ion-view view-title="Meu cadastro"><ion-content class="padding"><div class="pagina"><form name="formPerfil" ng-submit="salvar(formPerfil)" novalidate><div class="list"><label class="item item-input item-stacked-label institucional"><span class="input-label">Nome completo</span><input aria-label="Nome completo" ng-model="aluno.nome" ng-disabled="true"></label><label class="item item-input item-stacked-label institucional"><span class="input-label">Matrícula</span><input aria-label="Matrícula" ng-model="aluno.matricula" ng-disabled="true"></label><label class="item item-input item-stacked-label institucional"><span class="input-label">Curso</span><input aria-label="Curso" ng-model="aluno.curso" ng-disabled="true"></label><label class="item item-input item-stacked-label"><span class="input-label">E-mail pessoal</span><input aria-label="E-mail pessoal" type="email" ng-model="aluno.email"  required></label><label class="item item-input item-stacked-label"><span class="input-label">Telefone / WhatsApp</span><input aria-label="Telefone / WhatsApp" type="tel" ng-model="aluno.telefone" pattern="[0-9]{10,11}" required></label><label class="item item-input item-stacked-label"><span class="input-label">CEP</span><input aria-label="CEP" type="text" ng-model="aluno.cep" pattern="[0-9]{8}" required></label><label class="item item-input item-stacked-label"><span class="input-label">Rua e número</span><input aria-label="Rua e número" type="text" ng-model="aluno.rua"  required></label><label class="item item-input item-stacked-label"><span class="input-label">Bairro</span><input aria-label="Bairro" type="text" ng-model="aluno.bairro"  required></label><label class="item item-input item-stacked-label"><span class="input-label">Cidade</span><input aria-label="Cidade" type="text" ng-model="aluno.cidade"  required></label></div><p>Telefone e CEP: somente números.</p><button type="submit" class="button button-positive button-block">Salvar Alterações</button></form></div></ion-content></ion-view>
+<ion-view view-title="Meu cadastro"
+  ><ion-content class="padding"
+    ><div class="pagina">
+      <form name="formPerfil" ng-submit="salvar(formPerfil)" novalidate>
+        <div class="list">
+          <label class="item item-input item-stacked-label institucional"
+            ><span class="input-label">Nome completo</span
+            ><input
+              aria-label="Nome completo"
+              ng-model="aluno.nome"
+              ng-disabled="true" /></label
+          ><label class="item item-input item-stacked-label institucional"
+            ><span class="input-label">Matrícula</span
+            ><input
+              aria-label="Matrícula"
+              ng-model="aluno.matricula"
+              ng-disabled="true" /></label
+          ><label class="item item-input item-stacked-label institucional"
+            ><span class="input-label">Curso</span
+            ><input
+              aria-label="Curso"
+              ng-model="aluno.curso"
+              ng-disabled="true" /></label
+          ><label class="item item-input item-stacked-label"
+            ><span class="input-label">E-mail pessoal</span
+            ><input
+              aria-label="E-mail pessoal"
+              type="email"
+              ng-model="aluno.email"
+              required /></label
+          ><label class="item item-input item-stacked-label"
+            ><span class="input-label">Telefone / WhatsApp</span
+            ><input
+              aria-label="Telefone / WhatsApp"
+              type="tel"
+              ng-model="aluno.telefone"
+              pattern="[0-9]{10,11}"
+              required /></label
+          ><label class="item item-input item-stacked-label"
+            ><span class="input-label">CEP</span
+            ><input
+              aria-label="CEP"
+              type="text"
+              ng-model="aluno.cep"
+              pattern="[0-9]{8}"
+              required /></label
+          ><label class="item item-input item-stacked-label"
+            ><span class="input-label">Rua e número</span
+            ><input
+              aria-label="Rua e número"
+              type="text"
+              ng-model="aluno.rua"
+              required /></label
+          ><label class="item item-input item-stacked-label"
+            ><span class="input-label">Bairro</span
+            ><input
+              aria-label="Bairro"
+              type="text"
+              ng-model="aluno.bairro"
+              required /></label
+          ><label class="item item-input item-stacked-label"
+            ><span class="input-label">Cidade</span
+            ><input
+              aria-label="Cidade"
+              type="text"
+              ng-model="aluno.cidade"
+              required
+          /></label>
+        </div>
+        <p>Telefone e CEP: somente números.</p>
+        <button type="submit" class="button button-positive button-block">
+          Salvar Alterações
+        </button>
+      </form>
+    </div></ion-content
+  ></ion-view
+>
